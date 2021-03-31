@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll</title>
+    <style>
+      body{
+        background-color: black;
+        
+      }
+
+      img{
+        display: block;
+        text-align: center;
+        margin:10px auto;
+        }
+      button{
+        font-size: 24px;
+        background-color: rgb(39, 134, 138);
+        display: block;
+        margin:10px auto;
+        }
+    </style>
+  </head>
+  <body>
+    <button class="find">Find a rabbit</button>
+    <img src="/img/carrot.png" alt="carrot">
+    <img src="/img/carrot.png" alt="carrot">
+    <img src="/img/carrot.png" alt="carrot">
+    <img src="/img/carrot.png" alt="carrot">
+    <img src="/img/carrot.png" alt="carrot">
+    <img src="/img/carrot.png" alt="carrot">
+    <img src="/img/carrot.png" alt="carrot">
+    <img src="/img/carrot.png" alt="carrot">
+    <img src="/img/carrot.png" alt="carrot">
+    <img src="/img/carrot.png" alt="carrot">
+    <img src="/img/carrot.png" alt="carrot">
+    <img class="rabbit" src="/img/rabbit.png" alt="rabbit">
+    <img src="/img/carrot.png" alt="carrot">
+    <img src="/img/carrot.png" alt="carrot">
+    <script>
+      const finding = document.querySelector('.find');
+      const rabbit = document.querySelector('.rabbit');
+      const rabbitTop = rabbit.offsetTop;
+
+      finding.addEventListener('click',()=>{
+        console.log(rabbit);
+        console.log(rabbitTop);
+        rabbit.scrollIntoView({ behavior:'smooth'});
+      });
+    </script>
+  </body>
+</html>
